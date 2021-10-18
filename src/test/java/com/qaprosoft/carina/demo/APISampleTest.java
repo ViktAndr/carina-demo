@@ -16,6 +16,9 @@
 package com.qaprosoft.carina.demo;
 
 import java.lang.invoke.MethodHandles;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 import org.skyscreamer.jsonassert.JSONCompareMode;
 import org.slf4j.Logger;
@@ -44,6 +47,10 @@ public class APISampleTest implements IAbstractTest {
     @Test()
     @MethodOwner(owner = "qpsdemo")
     public void testCreateUser() throws Exception {
+        Map<String, String> env = System.getenv();
+        env = new TreeMap<>(env);
+        env.forEach((key, value) -> System.out.println(key + " -> " + value));
+
         LOGGER.info("test");
         setCases("4555,54545");
         PostUserMethod api = new PostUserMethod();
