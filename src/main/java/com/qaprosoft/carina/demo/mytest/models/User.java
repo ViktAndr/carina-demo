@@ -3,12 +3,12 @@ package com.qaprosoft.carina.demo.mytest.models;
 import java.util.Objects;
 
 public class User {
+
     private String email;
     private String password;
 
     public User() {
     }
-
 
     public String getEmail() {
         return email;

@@ -7,13 +7,16 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends AbstractPage {
 
-    @FindBy (id ="header")
+    @FindBy(id = "header")
     private HeaderMenu header;
 
     public HomePage(WebDriver driver) {
+
         super(driver);
     }
-    public HeaderMenu getHeaderMenu(){
+
+    public HeaderMenu getHeaderMenu() {
+
         return header;
     }
 }
