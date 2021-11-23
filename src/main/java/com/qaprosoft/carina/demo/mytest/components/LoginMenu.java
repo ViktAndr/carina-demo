@@ -43,6 +43,13 @@ public class LoginMenu extends AbstractUIObject {
         return new LoginPage(getDriver());
     }
 
+    public LoginPage loginWithInvalidPass (UserService user) {
+        enterEmail.type(user.getUserWithInvalidPassword().getEmail());
+        enterPass.type(user.getUserWithInvalidPassword().getPassword());
+        submitButton.click();
+        return new LoginPage(getDriver());
+    }
+
     private HomePage submitButton() {
         submitButton.click();
         return new HomePage(getDriver());
