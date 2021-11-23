@@ -17,7 +17,7 @@ public class LoginPage extends AbstractPage {
     }
 
     public String loginFailed() {
-        LOGGER.info("Login result [\" + textLoginFail.getText() + \"]");
+        LOGGER.info("Login result [\" + textLoginFail.getText() + ]");
         return someLabel.getText();
     }
 }
