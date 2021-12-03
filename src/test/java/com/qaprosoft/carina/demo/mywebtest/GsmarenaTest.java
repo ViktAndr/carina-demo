@@ -55,8 +55,7 @@ public class GsmarenaTest implements IAbstractTest {
 
     @Test()
     @MethodOwner(owner = "andrienko")
-    public void VerifyHeaderComponents() {
-
+    public void verifyHeaderComponents() {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
         Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened");
